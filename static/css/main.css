@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'font';
+    src: url(../font/font.ttf);
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-color: #1e1e1e;
+    --header-color: white;
+    --site-color-01: red;
+    --site-color-01-hover: #bd0202;
+    --height-header-main: 60px;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+h1 {
+    font-size: 2.6rem;
+    line-height: 32px;
+    color: white;
+    font-family: 'font';
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 18px;
+    color: white;
+    font-family: 'font';
+}
+
+a {
+    cursor: pointer;
+    font-size: 1.4rem;
+    line-height: 18px;
+    color: white;
+    font-family: 'font';
+}
+
+.header-main {
+    position: fixed;
+    top : 0;
+    width: 100%;
+    height: var(--height-header-main);
+    background-color: var(--header-color);
+    z-index: 1000;
+}
+
+.header-main-logo {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+}
+
+.header-main-logo-img {
+    width: var(--height-header-main);
+    height: var(--height-header-main);
+    margin-left: 10px;
+    background-image: url(../img/flavicon-bw.ico);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-main-logo-img:hover {
+    background-image: url(../img/flavicon.ico);
+}
+
+.header-main-nav {
+    width: fit-content;
+    height: 100%;
+}
+
+.header-main-nav ul {
+    list-style: none;
+    margin-left: 30px;
+}
+.header-main-nav ul li {
+    display: inline;
+    float: left;
+}
+
+.header-main-nav ul li a{
+    color: black;
+    padding: 0 10px;
+    font-family: 'font';
+    line-height: var(--height-header-main);
+    display: block;
+    height: 100%;
+}
+
+.header-main-nav ul li a:hover {
+    color: var(--site-color-01);
+    font-size: 2rem;
+}

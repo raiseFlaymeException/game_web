@@ -1,0 +1,46 @@
+<!--TODO: ADD A DISCLAIMER SAYING THAT DOWNLOADING THE GAME AND RUNNING THE EXECUTABLE MAY TRIGGER SOME WARNING OF THE ANTIVIRUS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game home page</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/flavicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/download.css') }}">
+</head>
+<body>
+    {% include "common/nav.html" %}
+
+    <div class="sep"></div>
+
+    {% for platform in platforms %}
+    <style>
+        .logo-{{ platform }} {
+            background-image: url("{{ url_for('static', filename='img/'+platform+'-logo.png') }}");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            width: 5vw;
+            height: 5vw;
+        }
+    </style>
+
+    <a href="{{ url_for('download_'+platform) }}" class="down">
+        <div class="download">
+            <h3>DOWNLOAD</h3> 
+            <p>for<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ platform }}</p> 
+            <div class="logo-center">
+                <div class="{{ 'logo-'+platform }}"></div>
+            </div>
+        </div>
+    </a>
+
+    {% endfor %}
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        preload("{{ url_for('static', filename='img/flavicon.ico') }}");
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+#HOME {
+    font-size: 2rem;
+    color: var(--site-color-01);
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - var(--height-header-main));
+    margin-top: var(--height-header-main);
+    background-image: url(../img/capture.png), url(../img/bg.jpg);
+    background-size: 70vh, cover;
+    background-repeat: no-repeat;
+    background-position: bottom, center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+main p {
+    font-size: 1.8rem;
+    line-height: 30px;
+}
+
+main a {
+    margin-top: 30px;
+    font-size: 1.8rem;
+}
+main .main-intro {
+    position: relative;
+    right: 6vh;
+    margin-top: 150px;
+}
+
+main .main-intro h1 {
+    font-size: 7rem;
+    line-height: 91px;
+}
+
+main .main-intro a {
+    display: block;
+    background-color: var(--site-color-01);
+    padding: 10px 20px;
+    width: fit-content;
+}
+
+main .main-intro a:hover{
+    font-size: 2rem;
+    background-color: var(--site-color-01-hover);
+}
+
+main .main-quotes{
+    position: relative;
+    left: 25vh;
+    margin-top: 150px;
+}
+
+main .main-quotes p {
+    border-left: 4px solid var(--site-color-01);
+    padding-left: 20px;
+    margin: 40px 0;
+}
+
+main .main-quotes p a {
+    color: var(--site-color-01);
+}
+
+main .main-quotes p a:hover {
+    font-size: 2rem;
+    color: var(--site-color-01-hover);
+}

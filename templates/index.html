@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game home page</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/flavicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    {% include "common/nav.html" %}
+
+    <main>
+        <div class="main-intro">
+            <h1>THE GAME</h1>
+            <p>This is one of my first game to evoluate that much.<br>
+                So I decided to publish it.&nbsp;Feel free to download it<br>
+                and try it out!
+            </p>
+            <a href="{{ url_for('download') }}">DOWNLOAD</a>
+        </div>
+        <div class="main-quotes">
+            <p>-Frequently <a href="{{ url_for('update') }}">updated</a> <br>
+                -A developper close to his <a href="{{ url_for('forum') }}">comunity</a><br>
+                -A game (almost) entierly <a href="{{ url_for('texture_pack') }}">customizable</a>
+            </p>
+            <p>
+                With each point say previously, <br> 
+                you won't regret playing this game <br>
+                and take part of this amazing <a href="{{ url_for('forum') }}">comunity</a>.<br>
+                Enjoy Playing!!
+            </p>
+        </div>
+    </main>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+    preload("{{ url_for('static', filename='img/flavicon.ico') }}");
+    </script>
+</body>
